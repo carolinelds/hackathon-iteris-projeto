@@ -1,26 +1,14 @@
 <template>
-    <div class="meu-menu">
-      <v-app-bar app color="amber darken-1" dense dark>
-          <v-app-bar-nav-icon @click="drawer = true">
-          </v-app-bar-nav-icon>
-          <v-spacer></v-spacer>
-          <v-toolbar-title>PáscoApp</v-toolbar-title>
-          
-      </v-app-bar>
-      
-      <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="amber darken-1"
-        >
+  <div class="meu-menu">
+    <v-app-bar app color="amber darken-1" dense dark>
+      <v-app-bar-nav-icon @click="drawer = true"> </v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
+      <v-toolbar-title>PáscoApp</v-toolbar-title>
+    </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-list nav dense>
+        <v-list-item-group v-model="group" active-class="amber darken-1">
           <router-link to="/">
             <v-list-item>
               <v-list-item-icon>
@@ -49,7 +37,7 @@
             </v-list-item>
           </router-link>
 
-            <router-link to="/pedido">
+          <router-link to="/pedido">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-star</v-icon>
@@ -57,25 +45,24 @@
               <v-list-item-title>MEUS PEDIDOS</v-list-item-title>
             </v-list-item>
           </router-link>
-
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'MeuMenu',
-    data: () => ({
-      drawer: false,
-      group: null,
-    }),
-}
+  name: "MeuMenu",
+  data: () => ({
+    drawer: false,
+    group: null,
+  }),
+};
 </script>
 
 <style scoped>
 .meu-menu a {
-    text-decoration: none;
+  text-decoration: none;
 }
 </style>

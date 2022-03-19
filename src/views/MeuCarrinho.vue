@@ -9,10 +9,10 @@
       </v-img>
     </div>
 
-    <div class="container rounded-lg pink lighten-5 px-4 pb-5">
-      <p class="title text-center">Seu pedido</p>
+    <div class="rounded-lg accent2 pa-4">
+      <p class="title">Seu pedido</p>
 
-      <div class="pink lighten-4 propriedade">
+      <div class="accent">
         <p>
           <span class="title-1 font-weight-bold">Nome:</span>
           <span class="subtitle"> {{ catalogoLista[0].nome }}</span>
@@ -24,7 +24,7 @@
           <span class="subtitle"> {{ catalogoLista[0].sabor }}</span>
         </p>
       </div>
-      <div class="pink lighten-4 propriedade">
+      <div class="accent propriedade">
         <p>
           <span class="title-1 font-weight-bold">Quantidade:</span>
           <span class="subtitle"> {{ 1 }}</span>
@@ -63,7 +63,7 @@
     </div>
 
     <router-link to="/pedido">
-      <v-btn block class="mt-6 pink lighten-4">Concluir</v-btn>
+      <v-btn block class="mt-6 success">Concluir</v-btn>
     </router-link>
   </v-container>
 </template>
