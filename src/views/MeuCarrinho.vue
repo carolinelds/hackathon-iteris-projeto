@@ -94,7 +94,6 @@ export default {
   data() {
     return {
       itensPedido,
-      //enderecoCliente,
       precoFinal,
     };
   },
