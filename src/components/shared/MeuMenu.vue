@@ -1,6 +1,6 @@
 <template>
   <div class="meu-menu">
-    <v-app-bar color="primary" dense dark>
+    <v-app-bar app color="amber darken-1" dense dark>
       <v-app-bar-nav-icon @click="drawer = true"> </v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <v-toolbar-title>PáscoApp</v-toolbar-title>
@@ -8,7 +8,7 @@
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="accent">
+        <v-list-item-group v-model="group" active-class="amber darken-1">
           <router-link to="/">
             <v-list-item>
               <v-list-item-icon>

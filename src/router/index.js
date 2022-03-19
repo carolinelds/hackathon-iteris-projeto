@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import telaInicio from '../views/telaInicio'
 import MeuCarrinho from '../views/MeuCarrinho'
 import MeuPedido from '../views/MeuPedido'
+import MeuCatalogo from '../views/MeuCatalogo'
 
 Vue.use(VueRouter)
 
@@ -21,7 +22,12 @@ const routes = [
     path: '/pedido',
     name: 'pedido',
     component: MeuPedido
-  }
+  },
+  {
+    path: '/catalogo',
+    name: 'catalogo',
+    component: MeuCatalogo
+  },
 ]
 
 const router = new VueRouter({
