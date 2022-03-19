@@ -39,6 +39,11 @@
         </div>
         <v-divider></v-divider>
         <div class="my-1">
+          <span class="title">Vendedor: </span>
+          <span class="subtitle-1">Quinta Beija-flor</span>
+        </div>
+        <v-divider></v-divider>
+        <div class="my-1">
           <span class="title">Endreço de Entrega: </span>
           <span class="subtitle-1"
             >Rua Taighum LLL, 566 - Paisagem Loud - Manaus - AM</span
@@ -54,9 +59,10 @@
         <span class="subtitle-1"> O Seu Pedido chegará em até 5 Horas. </span>
       </v-card-text>
 
-      <v-card-actions class="justify-space-between">
-        <v-btn color="success"> Confirmar Pedido </v-btn>
-        <v-btn color="error"> Cancelar Pedido </v-btn>
+      <v-card-actions>
+        <v-btn color="success" block>
+          <v-icon dark left> mdi-arrow-left </v-icon> Voltar a Home
+        </v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -65,11 +71,8 @@
 <script>
 export default {
   name: "MeuPedido",
+  props: [],
 };
 </script>
 
-<style>
-.verde {
-  background-color: #66bb6a;
-}
-</style>
+<style></style>
