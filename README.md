@@ -1,4 +1,12 @@
-# hackathon-decola-vue
+# PáscoApp
+
+O PáscoApp é uma aplicação desenvolvida em Vue.js, e tem como objetivo aproximar os vendedores de ovos de páscoa caseiros de seus clientes, visando facilitar a comunicação entre eles.
+
+## Estrutura
+
+A aplicação possui quatro telas:
+
+Na tela Início, o cliente pode conhecer o objetivo da aplicação, e com um click será direcionado para o catálogo para conhecer os produtos dos anunciantes.
 
 ## Project setup
 ```
