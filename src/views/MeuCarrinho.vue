@@ -15,19 +15,25 @@
       <div class="pink lighten-4 propriedade">
         <p>
           <span class="title-1 font-weight-bold">Nome:</span>
-          <span class="subtitle"> {{ itensPedido[0].nome }}</span>
+          <span class="subtitle"> {{ catalogoLista[0].nome }}</span>
         </p>
       </div>
       <div class="propriedade">
         <p>
           <span class="title-1 font-weight-bold">Sabor:</span>
-          <span class="subtitle"> {{ itensPedido[0].sabor }}</span>
+          <span class="subtitle"> {{ catalogoLista[0].sabor }}</span>
         </p>
       </div>
       <div class="pink lighten-4 propriedade">
         <p>
           <span class="title-1 font-weight-bold">Quantidade:</span>
-          <span class="subtitle"> {{ itensPedido[0].qtd }}</span>
+          <span class="subtitle"> {{ 1 }}</span>
+        </p>
+      </div>
+      <div class="propriedade">
+        <p>
+          <span class="title-1 font-weight-bold">Preço:</span>
+          <span class="subtitle"> R$ {{ catalogoLista[0].preco }}</span>
         </p>
       </div>
     </div>
@@ -44,14 +50,14 @@
       <div class="propriedade">
         <p>
           <span class="title-1 font-weight-bold">Frete: </span>
-          <span class="subtitle"> R$ 5,00</span>
+          <span class="subtitle"> R$ 5.00</span>
         </p>
       </div>
 
       <div class="propriedade">
         <p>
           <span class="title-1 font-weight-bold">Preço final:</span>
-          <span class="subtitle"> R$ {{ itensPedido[0].preco }}</span>
+          <span class="subtitle"> R$ {{ 5 + catalogoLista[0].preco }}</span>
         </p>
       </div>
     </div>
@@ -63,40 +69,38 @@
 </template>
 
 <script>
-let itensPedido = [
-  {
-    id: 1,
-    nome: "nome-teste",
-    sabor: "sabor-teste",
-    qtd: "qtd-teste",
-    preco: "preco-teste",
-  },
-];
-
-let precoFinal = parseFloat(57);
+//import EventBus from "../main.js";
 
 export default {
   name: "MeuCarrinho",
-  //props: {
-  //    itensPedido: {
-  //        type: Array,
-  //        required: true
-  //    },
-  //    enderecoCliente: {
-  //        type: Array,
-  //        required: true
-  //    },
-  //    precoFinal: {
-  //        type: Number,
-  //        required: true
-  //    },
-  //},
   data() {
     return {
-      itensPedido,
-      precoFinal,
+      //idSelecionado: 0,
+      catalogoLista: []
+      //itemSelecionado: []
     };
   },
+  created() {
+    fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
+      .then((response) => response.json())
+      .then((json) => {
+        this.catalogoLista = json;
+      })
+  //  EventBus.$on("selecionou", (idSelecionado) => {
+  //    console.log("selecionou event called", idSelecionado);
+  //  })
+  },
+  //methods: {
+  //  comparaId(){
+  //    for (let i = 0; i < this.catalogoLista.lenght; i++){
+  //      if (this.idSelecionado === this.catalogoLista[i].id){
+  //        this.itemSelecionado = this.catalogoLista[i];
+  //        console.log(this.itemSelecionado);
+  //        return this.itemSelecionado;
+  //      }
+  //    }
+  //  }
+  //}
 };
 </script>
 
