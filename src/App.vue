@@ -11,16 +11,10 @@
 
  
 
-<script> 
-
-export default { 
-
-  name: 'App' 
-
-  } 
-
-}; 
-
+<script>
+export default {
+  name: "App",
+};
 </script> 
 
  
