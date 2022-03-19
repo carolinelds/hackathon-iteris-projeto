@@ -31,7 +31,7 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="">
+          <router-link to="/catalogo">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-egg-easter</v-icon>
@@ -40,7 +40,7 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="">
+          <router-link to="/carrinho">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-cart-variant</v-icon>
@@ -49,7 +49,7 @@
             </v-list-item>
           </router-link>
 
-            <router-link to="">
+            <router-link to="/pedido">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-star</v-icon>
