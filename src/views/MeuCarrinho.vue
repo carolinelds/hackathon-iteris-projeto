@@ -12,7 +12,7 @@
     <div class="rounded-lg accent2 pa-4">
       <p class="title">Seu pedido</p>
 
-      <div class="accent">
+      <div class="accent propriedade">
         <p>
           <span class="title-1 font-weight-bold">Nome:</span>
           <span class="subtitle"> {{ catalogoLista[0].nome }}</span>

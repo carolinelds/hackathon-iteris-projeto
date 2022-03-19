@@ -14,11 +14,7 @@
         src="https://t2.rg.ltmcdn.com/pt/posts/8/5/2/ovo_de_pascoa_prestigio_9258_orig.jpg"
       ></v-img>
 
-<<<<<<< HEAD
-      <v-card-title><strong>Resumo do Pedido</strong></v-card-title>
-=======
       <v-card-title class="destaque">Resumo do Pedido</v-card-title>
->>>>>>> 88a5c6782139a42ac24db98a0028358439226484
 
       <v-card-text>
         <div class="my-1">
