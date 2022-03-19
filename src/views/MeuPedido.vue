@@ -14,40 +14,38 @@
         src="https://t2.rg.ltmcdn.com/pt/posts/8/5/2/ovo_de_pascoa_prestigio_9258_orig.jpg"
       ></v-img>
 
-      <v-card-title>Resumo do Pedido</v-card-title>
+      <v-card-title><strong>Resumo do Pedido</strong></v-card-title>
 
       <v-card-text>
         <div class="my-1">
           <span class="title">Sabor: </span
-          ><span class="subtitle-1">Recheado Com Mousse de Morango</span>
+          ><span class="subtitle-1">{{ produto[0].sabor }}</span>
         </div>
         <v-divider></v-divider>
         <div class="my-1">
           <span class="title">Quantidade: </span>
-          <span class="subtitle-1">3</span>
+          <span class="subtitle-1">2</span>
         </div>
 
         <v-divider></v-divider>
         <div class="my-1">
           <span class="title">Preço Unitario: </span>
-          <span class="subtitle-1">R$ 26,00</span>
+          <span class="subtitle-1">R$ {{ produto[0].preco }} </span>
         </div>
         <v-divider></v-divider>
         <div class="my-1">
           <span class="title">Total do Pedido: </span>
-          <span class="subtitle-1">R$ 78,00</span>
+          <span class="subtitle-1">R$ {{ produto[0].preco * 2 }}</span>
         </div>
         <v-divider></v-divider>
         <div class="my-1">
           <span class="title">Vendedor: </span>
-          <span class="subtitle-1">Quinta Beija-flor</span>
+          <span class="subtitle-1">{{ produto[0].local.nome }}</span>
         </div>
         <v-divider></v-divider>
         <div class="my-1">
-          <span class="title">Endreço de Entrega: </span>
-          <span class="subtitle-1"
-            >Rua Taighum LLL, 566 - Paisagem Loud - Manaus - AM</span
-          >
+          <span class="title">Endereço de Entrega:</span>
+          <span class="subtitle-1">{{ produto[4].local.endereco }}</span>
         </div>
       </v-card-text>
 
@@ -73,7 +71,19 @@
 <script>
 export default {
   name: "MeuPedido",
-  props: [],
+  data() {
+    return {
+      produto: [],
+      search: "",
+    };
+  },
+  created() {
+    fetch("https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json")
+      .then((response) => response.json())
+      .then((json) => {
+        this.produto = json;
+      });
+  },
 };
 </script>
 

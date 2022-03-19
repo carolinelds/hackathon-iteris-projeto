@@ -40,29 +40,24 @@
             v-text="item.nome"
           ></span>
 
-          <div> 
-            <strong>Sabor:</strong> {{item.sabor}}
-          </div>
-          <div> 
-            <strong>Preço: </strong>R${{item.preco}}
-          </div>
-        
-          <div> 
-            <strong>Endereço:</strong> {{item.local.endereco}}
-          </div>
-          
+          <div><strong>Sabor:</strong> {{ item.sabor }}</div>
+          <div><strong>Preço: </strong>R${{ item.preco }}</div>
+
+          <div><strong>Endereço:</strong> {{ item.local.endereco }}</div>
 
           <v-card-actions>
-             <v-btn
+            <router-link to="/carrinho">
+              <v-btn
                 outlined
                 rounded
                 text
                 color="#FFB300"
                 @click="emitClickEvent(item.id)"
-             >
+              >
                 <v-icon class="ml-2 mr-2">mdi-cart-variant</v-icon>
-                 Adicionar
-            </v-btn>
+                Adicionar
+              </v-btn>
+            </router-link>
           </v-card-actions>
         </v-list-item-content>
       </v-list-item>
@@ -112,3 +107,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+a {
+  text-decoration: none;
+  width: 100%;
+}
+</style>
