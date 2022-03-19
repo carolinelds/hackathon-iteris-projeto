@@ -7,10 +7,10 @@
     >
     </v-img>
 
-    <div class="rounded-lg pink lighten-5 pa-4">
+    <div class="rounded-lg accent2 pa-4">
       <p class="title">Seu pedido</p>
 
-      <div class="pink lighten-4">
+      <div class="accent">
         <p>
           <span class="title-1 font-weight-bold">Nome:</span>
           <span class="subtitle"> {{ itensPedido[0].nome }}</span>
@@ -22,7 +22,7 @@
           <span class="subtitle"> {{ itensPedido[0].sabor }}</span>
         </p>
       </div>
-      <div class="pink lighten-4">
+      <div class="accent">
         <p>
           <span class="title-1 font-weight-bold">Quantidade:</span>
           <span class="subtitle"> {{ itensPedido[0].qtd }}</span>
@@ -42,7 +42,7 @@
     </p>
 
     <router-link to="/">
-      <v-btn block>Concluir</v-btn>
+      <v-btn class="success" block>Concluir</v-btn>
     </router-link>
   </v-container>
 </template>

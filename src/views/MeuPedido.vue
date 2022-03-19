@@ -1,6 +1,6 @@
 <template>
   <div class="meu-pedido">
-    <v-card class="mx-auto my-12" max-width="374">
+    <v-card class="mx-auto my-12 accent2" max-width="374">
       <template slot="progress">
         <v-progress-linear
           color="deep-purple"
@@ -14,7 +14,7 @@
         src="https://t2.rg.ltmcdn.com/pt/posts/8/5/2/ovo_de_pascoa_prestigio_9258_orig.jpg"
       ></v-img>
 
-      <v-card-title>Resumo do Pedido</v-card-title>
+      <v-card-title class="destaque">Resumo do Pedido</v-card-title>
 
       <v-card-text>
         <div class="my-1">
@@ -53,7 +53,7 @@
 
       <v-divider class="mx-4"></v-divider>
 
-      <v-card-title>Previsão de Entrega</v-card-title>
+      <v-card-title class="destaque">Previsão de Entrega</v-card-title>
 
       <v-card-text>
         <span class="subtitle-1"> O Seu Pedido chegará em até 5 Horas. </span>
