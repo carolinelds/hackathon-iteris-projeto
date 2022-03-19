@@ -10,19 +10,25 @@
     <div class="rounded-lg pink lighten-5 pa-4">
       <p class="title">Seu pedido</p>
 
-      <div class="pl-5">
+      <div class="pink lighten-4">
         <p>
           <span class="title-1 font-weight-bold">Nome:</span>
           <span class="subtitle"> {{ itensPedido[0].nome }}</span>
         </p>
+      </div>
+      <div>
         <p>
           <span class="title-1 font-weight-bold">Sabor:</span>
           <span class="subtitle"> {{ itensPedido[0].sabor }}</span>
         </p>
+      </div>
+      <div class="pink lighten-4">
         <p>
           <span class="title-1 font-weight-bold">Quantidade:</span>
           <span class="subtitle"> {{ itensPedido[0].qtd }}</span>
         </p>
+      </div>
+      <div>
         <p>
           <span class="title-1 font-weight-bold">Preço final:</span>
           <span class="subtitle"> R$ {{ itensPedido[0].preco }}</span>
@@ -36,9 +42,8 @@
     </p>
 
     <router-link to="/">
-        <v-btn block>Concluir</v-btn>
+      <v-btn block>Concluir</v-btn>
     </router-link>
-    
   </v-container>
 </template>
 
@@ -85,7 +90,7 @@ export default {
 </script>
 
 <style scoped>
-    v-btn {
-        text-decoration: none;
-    }
+v-btn {
+  text-decoration: none;
+}
 </style> 
