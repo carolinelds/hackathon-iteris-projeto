@@ -60,9 +60,11 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn color="success" block>
-          <v-icon dark left> mdi-arrow-left </v-icon> Voltar a Home
-        </v-btn>
+        <router-link to="/">
+          <v-btn color="success" block>
+            <v-icon dark left> mdi-arrow-left </v-icon> Voltar a Home
+          </v-btn>
+        </router-link>
       </v-card-actions>
     </v-card>
   </div>
@@ -75,4 +77,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+a {
+  text-decoration: none;
+  width: 100%;
+}
+</style>
